@@ -1,0 +1,491 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#divComandi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#divComandi #comandi {
+  color: #ffffff;
+  background: #1f3341;
+  border: solid 1px #1f3341;
+  border-radius: 15px;
+  padding: 8px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+#footer {
+  width: 100%;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+
+#footer #copyright {
+  color: #000000;
+  font-weight: bold;
+}
+
+#header {
+  background: #1f3341;
+  width: 100%;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+#header #name {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 2em;
+}
+
+#header #links {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+#header #links a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+#title {
+  text-align: center;
+}
+
+#loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginForm form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  #loginForm form {
+    width: 60%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #loginForm input {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+}
+
+#loginForm input {
+  font-size: 16px;
+  height: 2em;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+#loginForm #email,
+#loginForm #password {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+#loginForm #submit {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+#loginForm #registrati,
+#loginForm #registraCompagnia {
+  margin-top: 10px;
+}
+
+#loginForm #registrati {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+#registratiForm,
+#updateForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#registratiForm form,
+#updateForm form {
+  width: 40%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  #registratiForm form,
+  #updateForm form {
+    width: 60%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #registratiForm input,
+  #updateForm input {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+}
+
+#registratiForm input,
+#updateForm input {
+  margin-bottom: 5px;
+  font-size: 16px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 2em;
+}
+
+#registratiForm #dataNascita,
+#updateForm #dataNascita {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  height: calc(2em + 2px);
+}
+
+#registratiForm #email,
+#registratiForm #password,
+#registratiForm #confermaPassword,
+#registratiForm #button,
+#updateForm #email,
+#updateForm #password,
+#updateForm #confermaPassword,
+#updateForm #button {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+#tabella {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#tabella table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 90%;
+}
+
+#tabella thead {
+  font-weight: bold;
+  font-size: 20px;
+  background: #1f3341;
+  color: #ffffff;
+}
+
+#tabella thead td:first-child {
+  border-top-left-radius: 8px;
+}
+
+#tabella thead td:last-child {
+  border-top-right-radius: 8px;
+}
+
+#tabella tbody tr:nth-child(even) {
+  background: #d8e4e7;
+}
+
+#tabella tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+#tabella tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+#spettacolo {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 3px solid #000000;
+}
+
+#spettacolo figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(216, 228, 231, 0.95);
+  color: #000000;
+  text-align: left;
+  -webkit-transition: top ease-in-out 250ms;
+  transition: top ease-in-out 250ms;
+}
+
+#spettacolo:hover figcaption,
+#spettacolo:focus figcaption {
+  top: 0;
+}
+
+#titolo-spettacolo {
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+#link-spettacolo {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 3px solid #000000;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#spettacoli {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+#spettacoli #spettacolo {
+  margin: 1.5em;
+}
+
+#spettacoli #spettacolo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+#spettacoli #spettacolo #titolo-spettacolo {
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 1150px) {
+  #spettacoli {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #spettacoli {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #spettacoli {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #spettacoli #titolo-spettacolo {
+    font-size: 2.5em;
+  }
+}
+
+#scheda-spettacolo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 40%;
+      grid-template-columns: 50% 40%;
+}
+
+#scheda-spettacolo #img-div {
+  margin-left: 1em;
+  margin-right: 1em;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+#scheda-spettacolo #img-div img {
+  width: 75%;
+  border: solid 3px #000000;
+}
+
+#scheda-spettacolo #info-div {
+  margin-left: 4em;
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  #scheda-spettacolo {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  #titolo-spettacolo {
+    font-size: 2.5em;
+  }
+  #info-spettacolo-h3 {
+    font-size: 2em;
+  }
+  #info-spettacolo {
+    font-size: 1.5em;
+  }
+}
+
+#registraCompagnia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#registraCompagnia form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  #registraCompagnia form {
+    width: 60%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #registraCompagnia input {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  #registraCompagnia #nome {
+    margin-right: none;
+  }
+}
+
+#registraCompagnia #password,
+#registraCompagnia #confermaPassword,
+#registraCompagnia #registra {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+#registraCompagnia #email {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+
+#registraCompagnia #password {
+  margin-top: 10px;
+}
+
+#registraCompagnia #confermaPassword {
+  margin-top: 5px;
+}
+
+#registraCompagnia input {
+  height: 2em;
+  font-size: 16px;
+  margin: 2px;
+}
+
+#aggiungiForm,
+#affittaForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#aggiungiForm form,
+#affittaForm form {
+  width: 40%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  #aggiungiForm form,
+  #affittaForm form {
+    width: 60%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #aggiungiForm input,
+  #affittaForm input {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+}
+
+#aggiungiForm input,
+#aggiungiForm select,
+#affittaForm input,
+#affittaForm select {
+  font-size: 16px;
+  height: 2em;
+  margin: 2px;
+}
+
+#aggiungiForm select,
+#affittaForm select {
+  height: calc(2em + 6px);
+}
+
+#affittaForm #submit {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+}
+/*# sourceMappingURL=style.css.map */

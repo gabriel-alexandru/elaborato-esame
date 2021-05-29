@@ -1,0 +1,411 @@
+$mainBlue: hsl(206, 35%, 19%);
+$white: #ffffff;
+$black: #000000;
+$lightgray: #b5b5b5;
+$lightblue: #d8e4e7;
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+#divComandi {
+  display: flex;
+  justify-content: center;
+
+  #comandi {
+    color: $white;
+    background: $mainBlue;
+    border: solid 1px $mainBlue;
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: bold;
+    margin: 2px;
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2em;
+
+  #copyright {
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+#header {
+  background: $mainBlue;
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 2em;
+
+  #name {
+    color: $white;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+
+  #links {
+    margin-left: auto;
+    margin-right: 2em;
+
+    a {
+      color: $white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 1em;
+    }
+  }
+}
+
+#title {
+  text-align: center;
+}
+
+#loginForm {
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 25%;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    form {
+      width: 60%;
+      grid-template-columns: 1fr;
+    }
+
+    input {
+      grid-column-start: 1;
+    }
+  }
+
+  input {
+    font-size: 16px;
+    height: 2em;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  #email,
+  #password {
+    grid-column-start: span 2;
+  }
+
+  #submit {
+    grid-column-start: span 2;
+  }
+
+  #registrati,
+  #registraCompagnia {
+    margin-top: 10px;
+  }
+
+  #registrati {
+    grid-column-start: 1;
+  }
+}
+
+#registratiForm,
+#updateForm {
+  display: flex;
+  justify-content: center;
+
+  form {
+    width: 40%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    form {
+      width: 60%;
+      grid-template-columns: 1fr;
+    }
+
+    input {
+      grid-column-start: 1;
+    }
+  }
+
+  input {
+    margin-bottom: 5px;
+    font-size: 16px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 2em;
+  }
+
+  #dataNascita {
+    grid-column-start: 1;
+    height: calc(2em + 2px);
+  }
+
+  #email,
+  #password,
+  #confermaPassword,
+  #button {
+    grid-column-start: span 2;
+  }
+}
+
+#tabella {
+  display: flex;
+  justify-content: center;
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 90%;
+  }
+
+  thead {
+    font-weight: bold;
+    font-size: 20px;
+    background: $mainBlue;
+    color: $white;
+
+    td:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    td:last-child {
+      border-top-right-radius: 8px;
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: $lightblue;
+    }
+
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 8px;
+    }
+
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 8px;
+    }
+  }
+}
+
+#spettacolo {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 3px solid $black;
+}
+
+#spettacolo figcaption {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba($lightblue, 0.95);
+  color: $black;
+  text-align: left;
+  transition: top ease-in-out 250ms;
+}
+
+#spettacolo:hover figcaption,
+#spettacolo:focus figcaption {
+  top: 0;
+}
+
+#titolo-spettacolo {
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+#link-spettacolo {
+  color: $black;
+  text-decoration: none;
+  border-bottom: 3px solid $black;
+  align-self: flex-start;
+}
+
+#spettacoli {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  #spettacolo {
+    margin: 1.5em;
+  }
+  #spettacolo img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+  #spettacolo #titolo-spettacolo {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #spettacoli {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  #spettacoli {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  #spettacoli {
+    grid-template-columns: 1fr;
+  }
+  #spettacoli #titolo-spettacolo {
+    font-size: 2.5em;
+  }
+}
+
+#scheda-spettacolo {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  #img-div {
+    margin-left: 1em;
+    margin-right: 1em;
+    grid-column-start: 1;
+    img {
+      width: 75%;
+      border: solid 3px $black;
+    }
+  }
+
+  #info-div {
+    margin-left: 4em;
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #scheda-spettacolo {
+    grid-template-columns: 100%;
+  }
+
+  #titolo-spettacolo {
+    font-size: 2.5em;
+  }
+
+  #info-spettacolo-h3 {
+    font-size: 2em;
+  }
+
+  #info-spettacolo {
+    font-size: 1.5em;
+  }
+}
+
+#registraCompagnia {
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    form {
+      width: 60%;
+      grid-template-columns: 1fr;
+    }
+
+    input {
+      grid-column-start: 1;
+    }
+
+    #nome {
+      margin-right: none;
+    }
+  }
+
+  #password,
+  #confermaPassword,
+  #registra {
+    grid-column-start: span 2;
+  }
+
+  #email {
+    grid-column-start: span 2;
+  }
+
+  #password {
+    margin-top: 10px;
+  }
+
+  #confermaPassword {
+    margin-top: 5px;
+  }
+
+  input {
+    height: 2em;
+    font-size: 16px;
+    margin: 2px;
+  }
+}
+
+#aggiungiForm,
+#affittaForm {
+  display: flex;
+  justify-content: center;
+
+  form {
+    width: 40%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    form {
+      width: 60%;
+      grid-template-columns: 1fr;
+    }
+
+    input {
+      grid-column-start: 1;
+    }
+  }
+
+  input,
+  select {
+    font-size: 16px;
+    height: 2em;
+    margin: 2px;
+  }
+
+  select {
+    height: calc(2em + 6px);
+  }
+}
+
+#affittaForm {
+  #submit {
+    grid-column-start: span 2;
+  }
+}

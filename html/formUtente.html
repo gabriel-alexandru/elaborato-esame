@@ -1,0 +1,37 @@
+<h1 id="title">Registrati</h1>
+<section id="registratiForm">
+  <form action="backend/registraUtente.php" method="POST">
+    <input type="text" name="nome" id="nome" placeholder="Nome" />
+    <input type="text" name="cognome" id="cognome" placeholder="Cognome" />
+    <br />
+
+    <input
+      type="date"
+      name="dataNascita"
+      id="dataNascita"
+      placeholder="Data di nascita"
+    />
+    <input
+      type="text"
+      name="luogoNascita"
+      id="luogoNascita"
+      placeholder="Luogo di nascita"
+    />
+    <br />
+
+    <input type="email" name="email" id="email" placeholder="Email" />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+    />
+    <input
+      type="password"
+      name="confermaPassword"
+      id="confermaPassword"
+      placeholder="Conferma password"
+    />
+    <input type="submit" id="button" value="Registrati" />
+  </form>
+</section>

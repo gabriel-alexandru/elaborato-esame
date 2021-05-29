@@ -1,0 +1,20 @@
+<h3 id="title">Affitta teatro</h3>
+<section id="affittaForm">
+  <form action="backend/affittaTeatro.php" method="POST">
+    <select name="teatro" id="listaTeatri">
+      <option selected disabled value="disabled">Teatro</option>
+      <?php
+          $result = $db->query('SELECT ID, nome FROM teatro'); while($row =
+      $result->fetch_assoc()) { echo '
+      <option value="' . $row['ID'] . '">' . $row['nome'] . '</option>
+      '; } ?>
+    </select>
+    <input
+      type="number"
+      name="durataAffitto"
+      id="durataAffitto"
+      placeholder="Durata affitto"
+    />
+    <input type="submit" value="Affitta" />
+  </form>
+</section>

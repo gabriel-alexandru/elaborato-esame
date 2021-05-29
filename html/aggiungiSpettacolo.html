@@ -1,0 +1,25 @@
+<h3 id="title">Aggiungi spettacolo</h3>
+<section id="aggiungiForm">
+  <form
+    enctype="multipart/form-data"
+    action="backend/aggiungiSpettacolo.php"
+    method="POST"
+  >
+    <input
+      type="text"
+      name="titolo"
+      id="titoloSpettacolo"
+      placeholder="Titolo"
+    />
+    <input type="date" name="data" id="dataSpettacolo" />
+    <input type="time" name="ora" id="oraSpettacolo" />
+    <input
+      type="number"
+      name="durata"
+      id="durataSpettacolo"
+      placeholder="Durata in minuti"
+    />
+    <input type="file" name="locandina" id="locandina" />
+    <input type="submit" value="Aggiungi Spettacolo" />
+  </form>
+</section>
